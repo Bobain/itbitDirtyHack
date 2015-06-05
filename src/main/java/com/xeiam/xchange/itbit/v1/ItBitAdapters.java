@@ -98,7 +98,7 @@ public final class ItBitAdapters {
   private static LimitOrder adaptOrder(BigDecimal amount, BigDecimal price, CurrencyPair currencyPair, String orderId, OrderType orderType,
       Date timestamp) {
 
-    return new LimitOrder(orderType, amount.divide(new BigDecimal(1000.0)), currencyPair, orderId, timestamp, price);
+    return new LimitOrder(orderType, amount, currencyPair, orderId, timestamp, price);
   }
 
   public static AccountInfo adaptAccountInfo(ItBitAccountInfoReturn[] info) {
